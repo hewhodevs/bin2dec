@@ -3,8 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Binary to decimal converter">
-    <link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="stylesheet name.css"></noscript>
+    <link rel="stylesheet" href="style.css">
     <title>Bin2Dec</title>
   </head>
   <body>
@@ -18,7 +17,19 @@
       <!-- Start main -->
       <main>
         <label for="userInput">Enter a binary value (1's &amp; 0's only)</label>
-        <input type="text" name="userInput" id="userInput">
+        <!-- 
+          Numerical input for desktop and mobile, for details refer to
+          https://danf.ca/blog/2013/09/19/input-type-number-and-ios-numeric-keypad/
+        -->
+        <input
+          type="number"
+          min="0"
+          inputmode="numeric"
+          pattern="[0-9]*"
+          title="Binary number"
+          name="userInput" 
+          id="userInput"
+        />
         <button>Convert to decimal</button>
         <h3>Decimal equivalent:</h3>
         <output for="userInput" aria-live="polite"></output>

@@ -4,3 +4,6 @@ body {
 input, button {
   font-size: 1rem;
 }
+input {
+  margin: 10px;
+}

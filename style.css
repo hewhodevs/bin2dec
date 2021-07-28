@@ -1,9 +1,4 @@
-/* Google Font Open Sans, light 300, regular 400, bold 700 */
-/* font-family: 'Open Sans', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
-
 body {
-  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   text-align: center;
   background-color: #E3E3F3;
@@ -45,7 +40,7 @@ input, label {
 label {
   font-size: 1rem;
   text-align: left;
-  margin-bottom: 8px;
+  margin-bottom: px;
 }
 input {
   font-weight: 400;

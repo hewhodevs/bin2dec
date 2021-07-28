@@ -40,7 +40,7 @@ input, label {
 label {
   font-size: 1rem;
   text-align: left;
-  margin-bottom: px;
+  margin-bottom: 5px;
 }
 input {
   font-weight: 400;

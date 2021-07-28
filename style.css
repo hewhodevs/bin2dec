@@ -1,14 +1,28 @@
 body {
   font-size: 16px;
+  text-align: center;
+  border: 1px solid red;
+}
+label {
+  display: block;
 }
 input, button {
   font-size: 1rem;
+  display: block;
 }
 input {
   margin: 10px;
   outline: none;
   box-shadow: none;
   border: 1px solid #000000;
+  display: inline-block;
+}
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
 }
 .warning, .inputWarning {
   color: #ff0000;

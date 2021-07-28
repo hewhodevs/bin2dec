@@ -16,21 +16,23 @@
       <!-- End header -->
       <!-- Start main -->
       <main>
-        <label for="userInput"><span id="inputLabel">Enter a binary value</span> <span id="inputLabelOneZero">(1's &amp; 0's only)</span></label>
-        <!-- 
-          Numerical input for desktop and mobile, for details refer to
-          https://danf.ca/blog/2013/09/19/input-type-number-and-ios-numeric-keypad/
-        -->
-        <input
-          type="number"
-          min="0"
-          inputmode="numeric"
-          pattern="[0-9]*"
-          title="Binary number"
-          name="userInput" 
-          id="userInput"
-        />
-        <button id="convertButton">Convert to decimal</button>
+        <div id="wrapper">
+          <label for="userInput"><span id="inputLabel">Enter a binary value</span> <span id="inputLabelOneZero">(1's &amp; 0's only)</span></label>
+          <!--
+            Numerical input for desktop and mobile, for details refer to
+            https://danf.ca/blog/2013/09/19/input-type-number-and-ios-numeric-keypad/
+          -->
+          <input
+            type="number"
+            min="0"
+            inputmode="numeric"
+            pattern="[0-9]*"
+            title="Binary number"
+            name="userInput"
+            id="userInput"
+          />
+          <button id="convertButton">Convert to decimal</button>
+        </div>
         <h3>Decimal equivalent:</h3>
         <output id="output" for="userInput" aria-live="polite"></output>
       </main>

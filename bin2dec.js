@@ -69,6 +69,9 @@ function bin2dec(inputString) {
 function displayResult(result) {
   output.innerHTML = result;
 }
+function clearResult() {
+  output.innerHTML = "";
+}
 /* 
   checkInput
   checks input as it's enterred, warns user of invalid input
@@ -87,6 +90,7 @@ function checkInput(e) {
   else will warn the user to correct their input
 */
 function convert() {
+  clearResult();
   const input = getInput();
   if (input.length === 0) {
     // Warn when no input provided

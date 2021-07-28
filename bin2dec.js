@@ -9,6 +9,7 @@ const inputWarning = "inputWarning";
 
 // event listenters
 convertButton.addEventListener('click', convert);
+userInput.addEventListener('input', checkInput);
 
 // Functions
 function getInput() {
@@ -24,9 +25,19 @@ function removeClass(e, className) {
   e.classList.remove(className);
 }
 function clearWarnings() {
-  removeClass(inputLabel, "warning");
-  removeClass(inputLabelOneZero, "warning");
-  removeClass(userInput, "inputWarning");
+  removeClass(inputLabel, textWarning);
+  removeClass(inputLabelOneZero, textWarning);
+  removeClass(userInput, inputWarning);
+}
+function showInvalidInputWarning() {
+  clearWarnings();
+  addClass(inputLabelOneZero, textWarning);
+  addClass(userInput, inputWarning);
+}
+function showNoInputWarning() {
+  clearWarnings();
+  addClass(inputLabel, textWarning);
+  addClass(userInput, inputWarning);
 }
 /* 
   isValid(string)
@@ -59,6 +70,18 @@ function displayResult(result) {
   output.innerHTML = result;
 }
 /* 
+  checkInput
+  checks input as it's enterred, warns user of invalid input
+*/
+function checkInput(e) {
+  let input = e.target.value;
+  if (isValid(input) === false) {
+    showInvalidInputWarning();
+  } else {
+    clearWarnings();
+  }
+}
+/* 
   convert
   If input is valid, convert it
   else will warn the user to correct their input
@@ -67,14 +90,10 @@ function convert() {
   const input = getInput();
   if (input.length === 0) {
     // Warn when no input provided
-    clearWarnings();
-    addClass(inputLabel, textWarning);
-    addClass(userInput, inputWarning);
+    showNoInputWarning();
   } else if (isValid(input) === false) {
     // Warn when input is invalid
-    clearWarnings();
-    addClass(inputLabelOneZero, textWarning);
-    addClass(userInput, inputWarning);
+    showInvalidInputWarning();
   } else {
     // perform conversion of valid input
     clearWarnings();

@@ -4,28 +4,24 @@ const convertButton = document.getElementById('convertButton');
 
 // event listenters
 convertButton.addEventListener('click', function() {
-  const input = getInput();
-  const isValidInput = isValid(input);
+  let input = userInput.value;
+  if (isValid(input)) { 
+    bin2dec(input) 
+  }
+  // run bin2dec function here
 });
 
-// functions
-
-function getInput() {
-  console.log("getInput() called!");
-  console.log(`Input: ${userInput.value}`);
-  return userInput.value;
-}
-
 function isValid(input) {
-  console.log("isValid() called!");
   const validChars = ['1', '0'];
   for (let i = 0; i <input.length; i++) {
     const char =input[i];
-    if (validChars.includes(char) === false) {
-      console.log(`isValid: false`);
+    if (validChars.includes(char) === false) { 
       return false;
     }
-  }
-  console.log(`isValid: true`);
-  return true;
+  } return true;
+}
+
+function bin2dec(inputString) {
+  let decimal = parseInt(inputString, 2);
+  return decimal;
 }

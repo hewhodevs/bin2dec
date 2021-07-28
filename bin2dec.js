@@ -10,6 +10,11 @@ const inputWarning = "inputWarning";
 // event listenters
 convertButton.addEventListener('click', convert);
 userInput.addEventListener('input', checkInput);
+userInput.addEventListener('keyup', function(e) {
+  if ('Enter' === e.key) {
+    convert();
+  }
+})
 
 // Functions
 function getInput() {

@@ -1,26 +1,89 @@
+/* Google Font Open Sans, light 300, regular 400, bold 700 */
+/* font-family: 'Open Sans', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
 body {
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   text-align: center;
-}
-label {
-  display: block;
-}
-input, button {
-  font-size: 1rem;
-  display: block;
-}
-input {
-  margin: 10px;
-  outline: none;
-  box-shadow: none;
-  border: 1px solid #000000;
-  display: inline-block;
-}
-#wrapper {
+  background-color: #E3E3F3;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+h1 {
+  margin: 0;
+  font-weight: 400;
+}
+h2 {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 1.8rem;
+}
+h3 {
+  font-weight: 1rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+#body-wrapper {
+  padding: 40px;
+  margin-top: 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 2px 5px 15px #9D9EB8;
+}
+input, button {
+  padding: 10px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+input, label {
+  display: block;
+}
+label {
+  font-size: 1rem;
+  text-align: left;
+  margin-bottom: 5px;
+}
+input {
+  font-weight: 400;
+  margin: 0 0 15px 0;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: none;
+}
+button {
+  font-weight: 400;
+  margin: 0;
+  color: #FFF;
+  background-color: #1A223A;
+  border: 1px solid #1A223A;
+  border-radius: 5px;
+  box-shadow: none;
+}
+#inputLabel {
+  font-weight: bold;
+}
+#inputLabelOneZero {
+  font-weight: 400;
+}
+#output-wrapper {
+  height: 40px;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+output {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+footer {
+  margin-top: 10px;
 }
 .warning, .inputWarning {
   color: #ff0000;

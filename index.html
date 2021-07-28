@@ -7,7 +7,7 @@
     <title>Bin2Dec</title>
   </head>
   <body>
-    <div>
+    <div id="body-wrapper">
       <!-- Start header -->
       <header>
         <h1>Bin2Dec</h1>
@@ -16,7 +16,7 @@
       <!-- End header -->
       <!-- Start main -->
       <main>
-        <div id="wrapper">
+        <div id="main-wrapper">
           <label for="userInput"><span id="inputLabel">Enter a binary value</span> <span id="inputLabelOneZero">(1's &amp; 0's only)</span></label>
           <!--
             Numerical input for desktop and mobile, for details refer to
@@ -32,17 +32,19 @@
             id="userInput"
           />
           <button id="convertButton">Convert to decimal</button>
+          <h3>Decimal Value</h3>
+          <div id="output-wrapper">
+            <output id="output" for="userInput" aria-live="polite"></output>
+          </div>
         </div>
-        <h3>Decimal equivalent:</h3>
-        <output id="output" for="userInput" aria-live="polite"></output>
       </main>
       <!-- End main -->
-      <!-- Start footer -->
-      <footer>
-        <p>Made by Joshua Kelly</p>
-      </footer>
-      <!-- End footer -->
     </div>
+    <!-- Start footer -->
+    <footer>
+      <p>Made by Joshua Kelly</p>
+    </footer>
+    <!-- End footer -->
     <!-- Import JavaScript Files -->
     <script defer src="bin2dec.js"></script>
   </body>

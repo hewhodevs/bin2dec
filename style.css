@@ -6,4 +6,24 @@ input, button {
 }
 input {
   margin: 10px;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid #000000;
+}
+.warning, .inputWarning {
+  color: #ff0000;
+}
+.inputWarning {
+  border: 1px solid #ff0000;
+}
+/*  Hide input number arrows */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

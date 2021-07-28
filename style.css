@@ -1,7 +1,6 @@
 body {
   font-size: 16px;
   text-align: center;
-  border: 1px solid red;
 }
 label {
   display: block;
@@ -22,7 +21,6 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
 }
 .warning, .inputWarning {
   color: #ff0000;

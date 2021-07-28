@@ -1,6 +1,7 @@
 // elements
 const userInput = document.getElementById('userInput');
 const convertButton = document.getElementById('convertButton');
+const output = document.getElementById('output');
 
 // event listenters
 convertButton.addEventListener('click', convert);
@@ -14,7 +15,7 @@ convertButton.addEventListener('click', convert);
 function convert() {
   const input = userInput.value;
   if (isValid(input)) { 
-    bin2dec(input);
+    displayResult(bin2dec(input));
   }
 }
 /* 
@@ -39,4 +40,11 @@ function isValid(input) {
 function bin2dec(inputString) {
   let decimal = parseInt(inputString, 2);
   return decimal;
+}
+/* 
+  displayResult
+  update the output element with a result string
+*/
+function displayResult(result) {
+  output.innerHTML = result;
 }
